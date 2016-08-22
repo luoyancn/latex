@@ -40,14 +40,14 @@
 \begin{document}
 
 \begin{attention}{Attention}
-\begin{mdframed}[topline=false, bottomline=false, leftline=false, rightline=false, backgroundcolor=lbcolor]
-\begin{minted}[fontsize=\footnotesize,linenos=false,breaklines=true]{bash}
-export FS=`virt-filesystem -a centos7.raw`
-guestmount -a centos7.raw -m $FS /mnt
-sed -i 's/xfs/ext4/g' /mnt/etc/fstab
-guestumount /mnt
-\end{minted}
-\end{mdframed}
+  \begin{mdframed}[topline=false, bottomline=false, leftline=false, rightline=false, backgroundcolor=lbcolor]
+    \begin{minted}[fontsize=\footnotesize,linenos=false,breaklines=true]{bash}
+      export FS=`virt-filesystem -a centos7.raw`
+      guestmount -a centos7.raw -m $FS /mnt
+      sed -i 's/xfs/ext4/g' /mnt/etc/fstab
+      guestumount /mnt
+    \end{minted}
+  \end{mdframed}
 \end{attention}
 
 \end{document}
